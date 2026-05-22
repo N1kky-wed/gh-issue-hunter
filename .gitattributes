@@ -1,3 +1,0 @@
-# Override GitHub Linguist language detection
-# Mark HTML as non-code so JavaScript shows as the primary language
-*.html linguist-vendored

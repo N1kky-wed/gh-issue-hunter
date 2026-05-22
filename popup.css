@@ -1,0 +1,192 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  width: 300px;
+  background: #0d1117;
+  color: #e6edf3;
+  padding: 0;
+}
+
+/* ── Header ── */
+.header {
+  padding: 16px 18px 12px;
+  background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+  border-bottom: 1px solid #21262d;
+}
+.header h2 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e6edf3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header h2 svg { flex-shrink: 0; }
+.header .subtitle {
+  font-size: 11px;
+  color: #8b949e;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* ── Sections ── */
+.section {
+  padding: 14px 18px;
+  border-bottom: 1px solid #21262d;
+}
+.section:last-child { border-bottom: none; }
+.section-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #8b949e;
+  margin-bottom: 10px;
+}
+
+/* ── Toggle Row ── */
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+.toggle-row + .toggle-row {
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.toggle-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+.toggle-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 13px;
+}
+.toggle-icon.green  { background: rgba(63,185,80,0.15); color: #3fb950; }
+.toggle-icon.purple { background: rgba(137,87,229,0.15); color: #8957e5; }
+.toggle-icon.red    { background: rgba(248,81,73,0.15);  color: #f85149; }
+.toggle-icon.orange { background: rgba(210,153,34,0.15); color: #d29922; }
+.toggle-icon.blue   { background: rgba(56,139,253,0.15); color: #388bfd; }
+.toggle-icon.cyan   { background: rgba(57,211,183,0.15); color: #39d3b7; }
+.toggle-icon.white  { background: rgba(230,237,243,0.10); color: #e6edf3; }
+
+/* ── Master toggle (power) ── */
+.power-section {
+  padding: 14px 18px;
+  border-bottom: 1px solid #21262d;
+  background: linear-gradient(135deg, rgba(35,134,54,0.08) 0%, transparent 100%);
+}
+.power-section .toggle-label { font-size: 13px; }
+.power-section .switch input:checked + .slider {
+  background: #238636;
+  box-shadow: 0 0 8px rgba(35,134,54,0.4);
+}
+
+/* ── Disabled overlay for sections ── */
+.settings-body.is-off {
+  opacity: 0.35;
+  pointer-events: none;
+  filter: grayscale(0.6);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+.settings-body {
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.toggle-text { min-width: 0; }
+.toggle-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #e6edf3;
+  white-space: nowrap;
+}
+.toggle-desc {
+  font-size: 10.5px;
+  color: #8b949e;
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Toggle Switch ── */
+.switch {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #30363d;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.slider::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 3px;
+  top: 3px;
+  background: #8b949e;
+  border-radius: 50%;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.switch input:checked + .slider {
+  background: #238636;
+}
+.switch input:checked + .slider::before {
+  transform: translateX(16px);
+  background: #fff;
+}
+
+/* ── Legend ── */
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #8b949e;
+}
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.legend-dot.green  { background: #3fb950; }
+.legend-dot.orange { background: #d29922; }
+.legend-dot.red    { background: #f85149; }
+
+/* ── Footer ── */
+.footer {
+  padding: 10px 18px;
+  text-align: center;
+  font-size: 10px;
+  color: #484f58;
+  border-top: 1px solid #21262d;
+}
+.footer a {
+  color: #388bfd;
+  text-decoration: none;
+}
