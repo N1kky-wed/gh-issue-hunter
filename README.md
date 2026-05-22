@@ -59,25 +59,19 @@ You can also **hide** or **dim** issues from either category to focus on what ma
 
 Click the extension icon in your toolbar to open the popup:
 
-```
-┌─────────────────────────────┐
-│  ⚡ Activate          [OFF] │  ← Master switch
-├─────────────────────────────┤
-│  ISSUES WITHOUT PR          │
-│  ✦ Highlight          [ON]  │  ← Green border + badge
-│  ✕ Hide               [OFF] │  ← Remove from view
-│  ◐ Dim                [OFF] │  ← Reduce opacity
-├─────────────────────────────┤
-│  ISSUES WITH PR             │
-│  ✦ Highlight          [ON]  │  ← Purple border + badge
-│  ✕ Hide               [OFF] │
-│  ◐ Dim                [OFF] │
-├─────────────────────────────┤
-│  EXTRA                      │
-│  ⟳ Live Scan          [ON]  │  ← Auto-detect on scroll
-│  🏷 Show Badges        [ON]  │  ← Toggle text badges
-└─────────────────────────────┘
-```
+
+| Section | Option | State | Effect |
+|---|---|---|---|
+| ⚡ **Master** | Activate | `OFF` | Master switch |
+| **Issues Without PR** | ✦ Highlight | `ON` | Green border + badge |
+| | ✕ Hide | `OFF` | Remove from view |
+| | ◐ Dim | `OFF` | Reduce opacity |
+| **Issues With PR** | ✦ Highlight | `ON` | Purple border + badge |
+| | ✕ Hide | `OFF` | Remove from view |
+| | ◐ Dim | `OFF` | Reduce opacity |
+| **Extra** | ⟳ Live Scan | `ON` | Auto-detect on scroll |
+| | 🏷 Show Badges | `ON` | Toggle text badges |
+
 
 > **Highlight / Hide / Dim are mutually exclusive** within each group — enabling one automatically disables the others.
 
