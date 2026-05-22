@@ -1,0 +1,8 @@
+node_modules/
+package.json
+package-lock.json
+generate_icons.html
+generate_icons_node.js
+*.zip
+.DS_Store
+Thumbs.db
